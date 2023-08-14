@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:Reference Uri="https://vm63.4hub.cloud:44363/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://vm63.4hub.cloud:44363/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="Capabilities"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://vm63.4hub.cloud:44363/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://vm63.4hub.cloud:44363/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="Aggregation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://vm63.4hub.cloud:44363/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://vm63.4hub.cloud:44363/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://vm63.4hub.cloud:44363/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://vm63.4hub.cloud:44363/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_MEASURES',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Measures.V1" Alias="Measures"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://vm63.4hub.cloud:44363/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZACAD99_PARCEIROS_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="Parceiro" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="PartnerId"/>
+                </Key>
+                <Property Name="PartnerId" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="BusinessPartner" sap:updatable="false"/>
+                <Property Name="PartnerType" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Partner Cat." sap:updatable="false"/>
+                <Property Name="PartnerName1" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="Name 1/Last Nm"/>
+                <Property Name="PartnerName2" Type="Edm.String" MaxLength="35" sap:unicode="false" sap:label="Name2/First Nme"/>
+                <Property Name="SearchTerm1" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Search Term 1"/>
+                <Property Name="SearchTerm2" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="Search Term 2"/>
+                <Property Name="Street" Type="Edm.String" MaxLength="60" sap:unicode="false" sap:label="Street"/>
+                <Property Name="HouseNumber" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="House Number"/>
+                <Property Name="District" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="District"/>
+                <Property Name="City" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="City"/>
+                <Property Name="Region" Type="Edm.String" MaxLength="3" sap:unicode="false" sap:label="Region"/>
+                <Property Name="Country" Type="Edm.String" MaxLength="3" sap:unicode="false" sap:label="Country/Reg."/>
+                <Property Name="Zipcode" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="Postal Code"/>
+            </EntityType>
+            <EntityType Name="I_BPContactType" sap:label="Business Partner Contact" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="RelationshipNumber"/>
+                    <PropertyRef Name="BusinessPartnerCompany"/>
+                    <PropertyRef Name="BusinessPartnerPerson"/>
+                    <PropertyRef Name="ValidityEndDate"/>
+                </Key>
+                <Property Name="RelationshipNumber" Type="Edm.String" Nullable="false" MaxLength="12" sap:display-format="UpperCase" sap:label="BP Relationship No." sap:quickinfo="BP Relationship Number"/>
+                <Property Name="BusinessPartnerCompany" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Business Partner" sap:quickinfo="Business Partner Number"/>
+                <Property Name="BusinessPartnerPerson" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Business Partner" sap:quickinfo="Business Partner Number"/>
+                <Property Name="ValidityEndDate" Type="Edm.DateTime" Nullable="false" Precision="0" sap:display-format="Date" sap:label="Valid To" sap:quickinfo="Validity Date (Valid To)"/>
+                <Property Name="ValidityStartDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Valid From" sap:quickinfo="Validity Date (Valid From)"/>
+                <Property Name="IsStandardRelationship" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Standard" sap:quickinfo="Standard Relationship"/>
+                <Property Name="RelationshipCategory" Type="Edm.String" MaxLength="6" sap:display-format="UpperCase" sap:label="Relationship Cat." sap:quickinfo="Business Partner Relationship Category"/>
+            </EntityType>
+            <EntityType Name="ZACAD99_ENDERECOSType" sap:label="Endereços para parceiros de negócio" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="AddressID"/>
+                </Key>
+                <Property Name="AddressID" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Address Number"/>
+                <Property Name="CareOfName" Type="Edm.String" MaxLength="40" sap:label="c/o" sap:quickinfo="c/o name"/>
+                <Property Name="AdditionalStreetSuffixName" Type="Edm.String" MaxLength="40" sap:label="Street 5"/>
+                <Property Name="CorrespondenceLanguage" Type="Edm.String" MaxLength="2" sap:label="Language Key"/>
+                <Property Name="PrfrdCommMediumType" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Comm. Method" sap:quickinfo="Communication Method (Key) (Business Address Services)"/>
+                <Property Name="POBox" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="PO Box"/>
+                <Property Name="POBoxIsWithoutNumber" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="PO Box w/o No." sap:quickinfo="Flag: PO Box Without Number"/>
+                <Property Name="POBoxPostalCode" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="PO Box Postal Code"/>
+                <Property Name="POBoxLobbyName" Type="Edm.String" MaxLength="40" sap:label="PO Box Lobby"/>
+                <Property Name="POBoxDeviatingCityName" Type="Edm.String" MaxLength="40" sap:label="PO Box City" sap:quickinfo="PO Box city"/>
+                <Property Name="POBoxDeviatingRegion" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="PO Box Region" sap:quickinfo="Region for PO Box (Country/Region, State, Province, ...)"/>
+                <Property Name="POBoxDeviatingCountry" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="PO box country"/>
+                <Property Name="DeliveryServiceTypeCode" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Delvry Serv Type" sap:quickinfo="Type of Delivery Service"/>
+                <Property Name="DeliveryServiceNumber" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Delivery Service No." sap:quickinfo="Number of Delivery Service"/>
+                <Property Name="AddressTimeZone" Type="Edm.String" MaxLength="6" sap:display-format="UpperCase" sap:label="Time zone" sap:quickinfo="Address time zone"/>
+                <Property Name="CityFileTestStatus" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Test stat./City file" sap:quickinfo="City file test status"/>
+                <Property Name="AddressStreetUnusable" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Undeliverable" sap:quickinfo="Street Address Undeliverable Flag"/>
+                <Property Name="AddressPostBoxUnusable" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Undeliverable" sap:quickinfo="PO Box Address Undeliverable Flag"/>
+                <Property Name="FullName" Type="Edm.String" MaxLength="80" sap:label="Full Name" sap:quickinfo="Full name of a party (Bus. Partner, Org. Unit, Doc. address)"/>
+                <Property Name="CityName" Type="Edm.String" MaxLength="40" sap:label="City"/>
+                <Property Name="District" Type="Edm.String" MaxLength="40" sap:label="District"/>
+                <Property Name="CityCode" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="City Code" sap:quickinfo="City code for city/street file"/>
+                <Property Name="HomeCityName" Type="Edm.String" MaxLength="40" sap:label="Different City" sap:quickinfo="City (different from postal city)"/>
+                <Property Name="PostalCode" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Postal Code" sap:quickinfo="City postal code"/>
+                <Property Name="CompanyPostalCode" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Company Postal Code" sap:quickinfo="Company Postal Code (for Large Customers)"/>
+                <Property Name="StreetName" Type="Edm.String" MaxLength="60" sap:label="Street"/>
+                <Property Name="StreetPrefixName" Type="Edm.String" MaxLength="40" sap:label="Street 2"/>
+                <Property Name="AdditionalStreetPrefixName" Type="Edm.String" MaxLength="40" sap:label="Street 3"/>
+                <Property Name="StreetSuffixName" Type="Edm.String" MaxLength="40" sap:label="Street 4"/>
+                <Property Name="HouseNumber" Type="Edm.String" MaxLength="10" sap:label="House Number"/>
+                <Property Name="HouseNumberSupplementText" Type="Edm.String" MaxLength="10" sap:label="Supplement" sap:quickinfo="House number supplement"/>
+                <Property Name="Building" Type="Edm.String" MaxLength="20" sap:label="Building Code" sap:quickinfo="Building (Number or Code)"/>
+                <Property Name="Floor" Type="Edm.String" MaxLength="10" sap:label="Floor" sap:quickinfo="Floor in building"/>
+                <Property Name="RoomNumber" Type="Edm.String" MaxLength="10" sap:label="Room Number" sap:quickinfo="Room or Apartment Number"/>
+                <Property Name="Country" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Country/Region Key"/>
+                <Property Name="Region" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Region" sap:quickinfo="Region (State, Province, County)"/>
+                <Property Name="County" Type="Edm.String" MaxLength="40" sap:label="County"/>
+                <Property Name="CountyCode" Type="Edm.String" MaxLength="8" sap:display-format="UpperCase" sap:label="County code" sap:quickinfo="County code for county"/>
+                <Property Name="TownshipCode" Type="Edm.String" MaxLength="8" sap:display-format="UpperCase" sap:label="Township code" sap:quickinfo="Township code for Township"/>
+                <Property Name="TownshipName" Type="Edm.String" MaxLength="40" sap:label="Township"/>
+                <Property Name="FormOfAddress" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Title" sap:quickinfo="Form-of-Address Key"/>
+                <Property Name="BusinessPartnerName1" Type="Edm.String" MaxLength="40" sap:label="Name" sap:quickinfo="Name 1"/>
+                <Property Name="BusinessPartnerName2" Type="Edm.String" MaxLength="40" sap:label="Name 2"/>
+                <Property Name="Nation" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Address Version" sap:quickinfo="Version ID for International Addresses"/>
+                <Property Name="PhoneNumber" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Telephone" sap:quickinfo="First telephone no.: dialling code+number"/>
+                <Property Name="FaxNumber" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Fax" sap:quickinfo="First Fax No.: Area Code + Number"/>
+                <Property Name="SearchTerm1" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Search Term 1"/>
+                <Property Name="SearchTerm2" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Search Term 2"/>
+                <Property Name="StreetSearch" Type="Edm.String" MaxLength="25" sap:display-format="UpperCase" sap:label="Street" sap:quickinfo="Street Name in Uppercase for Search Help"/>
+                <Property Name="CitySearch" Type="Edm.String" MaxLength="25" sap:display-format="UpperCase" sap:label="City" sap:quickinfo="City name in Uppercase for Search Help"/>
+                <Property Name="BusinessPartnerName3" Type="Edm.String" MaxLength="40" sap:label="Name 3"/>
+                <Property Name="BusinessPartnerName4" Type="Edm.String" MaxLength="40" sap:label="Name 4"/>
+                <Property Name="TaxJurisdiction" Type="Edm.String" MaxLength="15" sap:display-format="UpperCase" sap:label="Tax Jurisdiction"/>
+                <Property Name="TransportZone" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Transportation Zone" sap:quickinfo="Transportation zone to or from which the goods are delivered"/>
+                <Property Name="AddressCityPostBoxCode" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="City Code" sap:quickinfo="City PO box code (City file)"/>
+                <Property Name="Person" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Person Number"/>
+            </EntityType>
+            <EntityType Name="ZACAD99_PARCEIROSType" sap:label="CDS Mestre de Parceiros" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Business Partner" sap:quickinfo="Business Partner Number"/>
+                <Property Name="NomeCompleto" Type="Edm.String" MaxLength="81"/>
+                <Property Name="TermoPesquisa1" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Search Term 1" sap:quickinfo="Search Term 1 for Business Partner"/>
+                <Property Name="TermoPesquisa2" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Search Term 2" sap:quickinfo="Search Term 2 for Business Partner"/>
+                <Property Name="IdEndereco" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Address Number"/>
+                <Property Name="descricaoIndustriaPT" Type="Edm.String" MaxLength="30" sap:label="Description"/>
+                <Property Name="descricaoIndustria" Type="Edm.String" MaxLength="30" sap:label="Description"/>
+                <NavigationProperty Name="to_contatos" Relationship="ZACAD99_PARCEIROS_SRV.assoc_834148B120E7417129395E1A358B0E68" FromRole="FromRole_assoc_834148B120E7417129395E1A358B0E68" ToRole="ToRole_assoc_834148B120E7417129395E1A358B0E68"/>
+                <NavigationProperty Name="to_enderecos" Relationship="ZACAD99_PARCEIROS_SRV.assoc_A8BE7C6593191174072CB761C7C6B45B" FromRole="FromRole_assoc_A8BE7C6593191174072CB761C7C6B45B" ToRole="ToRole_assoc_A8BE7C6593191174072CB761C7C6B45B"/>
+            </EntityType>
+            <Association Name="assoc_A8BE7C6593191174072CB761C7C6B45B" sap:content-version="1">
+                <End Type="ZACAD99_PARCEIROS_SRV.ZACAD99_PARCEIROSType" Multiplicity="1" Role="FromRole_assoc_A8BE7C6593191174072CB761C7C6B45B"/>
+                <End Type="ZACAD99_PARCEIROS_SRV.ZACAD99_ENDERECOSType" Multiplicity="0..1" Role="ToRole_assoc_A8BE7C6593191174072CB761C7C6B45B"/>
+            </Association>
+            <Association Name="assoc_834148B120E7417129395E1A358B0E68" sap:content-version="1">
+                <End Type="ZACAD99_PARCEIROS_SRV.ZACAD99_PARCEIROSType" Multiplicity="1" Role="FromRole_assoc_834148B120E7417129395E1A358B0E68"/>
+                <End Type="ZACAD99_PARCEIROS_SRV.I_BPContactType" Multiplicity="*" Role="ToRole_assoc_834148B120E7417129395E1A358B0E68"/>
+            </Association>
+            <EntityContainer Name="ZACAD99_PARCEIROS_SRV_Entities" m:IsDefaultEntityContainer="true" sap:message-scope-supported="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="Parceiros" EntityType="ZACAD99_PARCEIROS_SRV.Parceiro" sap:deletable="false" sap:searchable="true" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="I_BPContact" EntityType="ZACAD99_PARCEIROS_SRV.I_BPContactType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="ZACAD99_ENDERECOS" EntityType="ZACAD99_PARCEIROS_SRV.ZACAD99_ENDERECOSType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="ZACAD99_PARCEIROS" EntityType="ZACAD99_PARCEIROS_SRV.ZACAD99_PARCEIROSType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <AssociationSet Name="assoc_834148B120E7417129395E1A358B0E68" Association="ZACAD99_PARCEIROS_SRV.assoc_834148B120E7417129395E1A358B0E68" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ZACAD99_PARCEIROS" Role="FromRole_assoc_834148B120E7417129395E1A358B0E68"/>
+                    <End EntitySet="I_BPContact" Role="ToRole_assoc_834148B120E7417129395E1A358B0E68"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_A8BE7C6593191174072CB761C7C6B45B" Association="ZACAD99_PARCEIROS_SRV.assoc_A8BE7C6593191174072CB761C7C6B45B" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ZACAD99_PARCEIROS" Role="FromRole_assoc_A8BE7C6593191174072CB761C7C6B45B"/>
+                    <End EntitySet="ZACAD99_ENDERECOS" Role="ToRole_assoc_A8BE7C6593191174072CB761C7C6B45B"/>
+                </AssociationSet>
+            </EntityContainer>
+            <Annotations Target="ZACAD99_PARCEIROS_SRV.ZACAD99_PARCEIROS_SRV_Entities" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ApplyMultiUnitBehaviorForSortingAndFiltering" Bool="true"/>
+                <Annotation Term="Aggregation.ApplySupported">
+                    <Record>
+                        <PropertyValue Property="Transformations">
+                            <Collection>
+                                <String>aggregate</String>
+                                <String>groupby</String>
+                                <String>filter</String>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Rollup" EnumMember="None"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <atom:link rel="self" href="https://vm63.4hub.cloud:44363/sap/opu/odata/sap/ZACAD99_PARCEIROS_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="https://vm63.4hub.cloud:44363/sap/opu/odata/sap/ZACAD99_PARCEIROS_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

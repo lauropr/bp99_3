@@ -1,0 +1,28 @@
+<mvc:View controllerName="bp.bp99.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <List noDataText="{i18n>semDados}"
+              items="{/ZACAD99_PARCEIROS}"> <!--quando há barra no binding, estamos no caminho absoluto (início)-->
+
+              <!--Aqui vão as agregações-->
+            <headerToolbar>
+                <Toolbar design="Solid" >
+                    <Title text="{i18n>parceiros}" />
+                </Toolbar>
+            </headerToolbar>
+
+            <items>
+                <StandardListItem
+                    type="Navigation"
+
+                    title="{Id}"                
+                    description="{NomeCompleto}"
+                    info="{TermoPesquisa1}"          
+                                        
+                    press="aoPressionarItem"
+                    />               
+            </items>
+        </List>
+    </Page>
+</mvc:View>
