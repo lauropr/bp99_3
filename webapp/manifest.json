@@ -69,11 +69,14 @@
           "bundleName": "bp.bp99.i18n.i18n"
         }
       },
+      "test":{
+        "type": "sap.ui.model.json.JSONModel"
+      },
       "": {
         "dataSource": "mainService",
         "preload": true,
         "settings": {
-          "useBatch": false
+          "useBatch": false          
         }
       }
     },
