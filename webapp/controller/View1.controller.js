@@ -21,7 +21,7 @@ sap.ui.define([
 
                 //acessa o Id do objeto
                 let sId = oObjetoClicado.Id;
-
+                
                 
             }
 
