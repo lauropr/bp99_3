@@ -51,7 +51,7 @@
 				<subSections>
 					<ObjectPageSubSection>
 						<blocks>
-                            <m:Label text="{}" />
+                            <m:Label text="{to_enderecos/FullName}" />
 						</blocks>
 					</ObjectPageSubSection>
 				</subSections>

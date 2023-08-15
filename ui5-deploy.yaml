@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "2.5"
+metadata:
+  name: bp.bp99
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          url: https://vm63.4hub.cloud:44363/
+          client: "120"
+        app:
+          name: ZACA99_BP
+          description: ""
+          package: ZABAPJULHO
+          transport: S4HK902276

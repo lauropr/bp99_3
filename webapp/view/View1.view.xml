@@ -2,13 +2,19 @@
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
-        <List noDataText="{i18n>semDados}"
+		<subHeader>
+			<OverflowToolbar>
+				<SearchField liveChange=".aoPesquisar" width="50%" />
+			</OverflowToolbar>
+		</subHeader>
+
+        <List id="parceiros" noDataText="{i18n>semDados}"
               items="{/ZACAD99_PARCEIROS}"> <!--quando há barra no binding, estamos no caminho absoluto (início)-->
 
               <!--Aqui vão as agregações-->
             <headerToolbar>
                 <Toolbar design="Solid" >
-                    <Title text="{i18n>parceiros}" />
+                    <Title text="{i18n>parceiros}" />    
                 </Toolbar>
             </headerToolbar>
 
