@@ -1,0 +1,65 @@
+<mvc:View controllerName="bp.bp99.controller.View2"
+    displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.uxap"
+	xmlns:layout="sap.ui.layout"
+	xmlns:m="sap.m"
+    xmlns:core="sap.ui.core">
+
+    <ObjectPageLayout id="objPage">
+        <headerTitle>
+            <ObjectPageDynamicHeaderTitle >
+                <actions>
+					<m:OverflowToolbarButton icon="sap-icon://edit" text="edit header" type="Emphasized" tooltip="edit">
+						<m:layoutData>
+							<m:OverflowToolbarLayoutData priority="NeverOverflow"/>
+						</m:layoutData>
+					</m:OverflowToolbarButton>
+				</actions>
+
+                <expandedHeading>
+					<m:HBox>
+						<m:Title text="{NomeCompleto}" wrapping="true"/>
+					</m:HBox>
+				</expandedHeading>
+
+				<expandedContent>
+					<m:FlexBox  fitContainer="true" alignItems="Center">
+	                    <m:Text text="{Id}"/>    
+                    </m:FlexBox>    
+				</expandedContent>
+
+				<snappedContent>
+					<m:Text text="{Id}"/>
+				</snappedContent>
+            </ObjectPageDynamicHeaderTitle>
+        </headerTitle>
+
+
+        <headerContent>
+            <m:FlexBox wrap="Wrap">
+                    <layout:VerticalLayout class="sapUiSmallMarginBeginEnd">
+                        <m:Text text="{TermoPesquisa1}"/>
+                        <m:Text text="{TermoPesquisa2}"/>
+                    </layout:VerticalLayout>
+                                    
+            </m:FlexBox>
+        </headerContent>
+
+        <sections>
+			<ObjectPageSection titleUppercase="false" id="" title="Endereços">
+				<subSections>
+					<ObjectPageSubSection>
+						<blocks>
+                            <m:Label text="{}" />
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>            
+
+        </sections>
+
+    </ObjectPageLayout>
+
+
+</mvc:View>

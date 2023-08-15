@@ -21,6 +21,10 @@ sap.ui.define([
 
                 //acessa o Id do objeto
                 let sId = oObjetoClicado.Id;
+
+                //acessa o Component.js através do getOwnerComponent()
+                let oRouter = this.getOwnerComponent().getRouter();
+                oRouter.navTo("detalhe", { parceiro : sId });
                 
                 
             }
