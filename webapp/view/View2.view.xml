@@ -4,19 +4,11 @@
 	xmlns="sap.uxap"
 	xmlns:layout="sap.ui.layout"
 	xmlns:m="sap.m"
-    xmlns:core="sap.ui.core">
-
+    xmlns:core="sap.ui.core"
+	xmlns:f="sap.ui.layout.form">
     <ObjectPageLayout id="objPage">
         <headerTitle>
             <ObjectPageDynamicHeaderTitle >
-                <actions>
-					<m:OverflowToolbarButton icon="sap-icon://edit" text="edit header" type="Emphasized" tooltip="edit">
-						<m:layoutData>
-							<m:OverflowToolbarLayoutData priority="NeverOverflow"/>
-						</m:layoutData>
-					</m:OverflowToolbarButton>
-				</actions>
-
                 <expandedHeading>
 					<m:HBox>
 						<m:Title text="{NomeCompleto}" wrapping="true"/>
@@ -47,15 +39,71 @@
         </headerContent>
 
         <sections>
-			<ObjectPageSection titleUppercase="false" id="" title="Endereços">
+			<ObjectPageSection titleUppercase="false" id="" title="Endereço">
 				<subSections>
 					<ObjectPageSubSection>
 						<blocks>
-                            <m:Label text="{to_enderecos/FullName}" />
+							<f:SimpleForm id="SimpleFormChange354"
+							editable="true"
+							layout="ResponsiveGridLayout"
+							labelSpanXL="3"
+							labelSpanL="3"
+							labelSpanM="3"
+							labelSpanS="12"
+							adjustLabelSpan="false"
+							emptySpanXL="4"
+							emptySpanL="4"
+							emptySpanM="4"
+							emptySpanS="0"
+							columnsXL="1"
+							columnsL="1"
+							columnsM="1"
+							singleContainerFullSize="false" >
+							<f:toolbar>
+								<m:OverflowToolbar >
+									<m:content>
+										<m:ToolbarSpacer />
+										<m:Button text="Editar" type="Emphasized" visible="{visibilidade>/visualizacao}"
+												  press="aoEditar" />
+										<m:Button text="Salvar" type="Accept" visible="{visibilidade>/edicao}" 
+												press="aoSalvar" />
+										<m:Button text="Cancelar" type="Reject" visible="{visibilidade>/edicao}"
+												  press="aoCancelar" />
+									</m:content>
+								</m:OverflowToolbar>
+							</f:toolbar>
+
+							<f:content>
+								<m:Label text="Rua" />
+								<m:Input value="{to_enderecos/StreetName}" editable="{modo>/edicao}" />
+
+								<m:Label text="Numero" />
+								<m:Input value="{to_enderecos/HouseNumber}" editable="{modo>/edicao}" />
+
+								<m:Label text="Bairro" />
+								<m:Input value="{to_enderecos/District}" editable="{modo>/edicao}" />
+
+								<m:Label text="Cidade" />
+								<m:Input value="{to_enderecos/City}" editable="{modo>/edicao}" />
+
+								<m:Label text="Estado" />
+								<m:Input value="{to_enderecos/Region}" editable="{modo>/edicao}" />
+
+								<m:Label text="País" />
+								<m:Input value="{to_enderecos/Country}" editable="{modo>/edicao}" />
+
+								<m:Label text="CEP" />
+								<m:Input value="{to_enderecos/ZipCode}" editable="{modo>/edicao}" />
+
+							</f:content>
+						</f:SimpleForm>
+
+
 						</blocks>
 					</ObjectPageSubSection>
 				</subSections>
 			</ObjectPageSection>            
+      
 
         </sections>
 

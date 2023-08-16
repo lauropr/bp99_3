@@ -24,6 +24,14 @@
           "localUri": "localService/metadata.xml",
           "odataVersion": "2.0"
         }
+      },
+      "modo": {
+        "uri": "localService/modo.json",
+        "type": "JSON" 
+      },
+      "visibilidade": {
+        "uri": "localService/visibilidade.json",
+        "type": "JSON"
       }
     }
   },
@@ -75,6 +83,14 @@
         "settings": {
           "useBatch": false          
         }
+      },
+      "modo":{
+        "type": "sap.ui.model.json.JSONModel",
+        "dataSource": "modo"
+      },
+      "visibilidade":{
+        "type": "sap.ui.model.json.JSONModel",
+        "dataSource": "visibilidade"
       }
     },
     "resources": {
